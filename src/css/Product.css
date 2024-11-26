@@ -1,0 +1,186 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.boxProduct {
+    max-width: 220px;
+    height: 340px;
+    position: relative;
+    border: 1px solid rgba(128, 128, 128, 0.26);
+    border-radius: 6px;
+    
+    .img_box {
+        border-radius: 8px 8px 0px 0px;
+        width: 220px;
+        height: 250px;
+        padding-left: 15px;
+        padding-top: 30px;
+        overflow: hidden;
+        img {
+            width: 180px;
+        }
+        img:hover {
+            scale: 1.05;
+            transition: 0.5s;
+        }
+    }
+    
+    button {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        border: 0;
+        background-color: #ffffff00;
+        cursor: pointer;
+        img {
+            width: 20px;
+        }
+    }
+    
+    .footer_text {
+        color: black;
+        height: 90px;
+        padding: 7px;
+        border-radius: 0px 0px 8px 8px;
+
+        p {
+            max-width: 185px;
+            height: 50px;
+            font-size: 14px;
+            font-family: Gilroy;
+            font-weight: 500;
+            line-height: 16px; 
+            overflow-x: scroll; 
+            overflow-y: scroll;
+        }
+    }
+    
+    .price_config {
+        max-width: 200px;
+        margin-top: 10px;
+
+        span {
+            position: absolute;
+            bottom: 7px;
+            left: 7px;
+        }
+        
+        img {
+            position: absolute;
+            bottom: 3px;
+            right: 7px;
+            background-color: #fff;
+            border-radius: 50px;
+            width: 24px;
+            cursor: pointer;
+        }
+    }
+    
+    .basket {
+        position: absolute;
+        bottom: 3px;
+        right: 7px;
+        background-color: #fff;
+        border-radius: 50px;
+        width: 24px;
+        cursor: pointer;
+    }
+}
+
+.boxProduct:hover {
+    box-shadow: 0 0 5px 0 grey;
+    border-radius: 8px;
+    transition: 0.8s;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    .boxProduct {
+        max-width: 180px; /* Уменьшаем ширину на мобильных устройствах */
+        height: 320px; /* Немного уменьшаем высоту */
+    }
+
+    .img_box {
+        max-width: 180px; /* Уменьшаем ширину */
+        height: 200px; /* Уменьшаем высоту */
+        padding-left: 20px; /* Меньше отступов */
+        padding-top: 20px; /* Меньше отступов */
+        
+        img {
+            width: 150px; /* Уменьшаем размер картинки */
+        }
+    }
+
+    .footer_text {
+        height: 80px; /* Уменьшаем высоту */
+        padding: 5px; /* Меньше отступов */
+        
+        p {
+            font-size: 12px; /* Уменьшаем шрифт */
+        }
+    }
+
+    .price_config {
+        max-width: 180px; /* Уменьшаем ширину */
+        margin-top: 5px; /* Меньше отступов */
+    }
+
+    .price_config span {
+        font-size: 12px; /* Уменьшаем шрифт цены */
+    }
+
+    .price_config img {
+        width: 20px; /* Уменьшаем размер иконки корзины */
+    }
+
+    .basket {
+        width: 20px; /* Уменьшаем размер иконки корзины */
+    }
+}
+
+/* Очень маленькие экраны (например, смартфоны в портретной ориентации) */
+@media (max-width: 480px) {
+    .boxProduct {
+        width: 150px; /* Уменьшаем еще больше для маленьких экранов */
+        height: 280px;
+    }
+
+    .img_box {
+        width: 150px;
+        height: 170px;
+        padding-left: 15px;
+        padding-top: 15px;
+
+        img {
+            width: 120px; /* Уменьшаем картинку для очень маленьких экранов */
+        }
+    }
+
+    .footer_text {
+        height: 70px;
+        padding: 5px;
+
+        p {
+            font-size: 10px; /* Уменьшаем шрифт для маленьких экранов */
+        }
+    }
+
+    .price_config {
+        max-width: 150px;
+        margin-top: 5px;
+    }
+
+    .price_config span {
+        font-size: 10px;
+    }
+
+    .price_config img {
+        width: 18px; /* Уменьшаем размер иконки корзины */
+    }
+
+    .basket {
+        width: 18px; /* Уменьшаем размер корзины */
+    }
+}
