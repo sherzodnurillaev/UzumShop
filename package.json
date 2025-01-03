@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^1.7.5",
     "concurrently": "^8.2.2",
+    "formik": "^2.4.6",
     "json": "^11.0.0",
     "json-server": "^1.0.0-beta.2",
     "react": "^18.3.1",

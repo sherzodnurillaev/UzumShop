@@ -159,7 +159,8 @@ const Header = () => {
                                 src="/icons/mean.png"
                                 alt="logo"
                                 className="w-[20px] cursor-pointer"
-                                onClick={() => navigate("/Sign")}
+                                // переход к signPage
+                                onClick={() => navigate("/Profile")}
                             />
                             <p>{user ? user.name : "anonimus"}</p>
                         </div>
@@ -192,8 +193,9 @@ const Header = () => {
 
                     <div className="flex items-center cursor-pointer gap-[7px] hover:bg-gray-200 pl-[10px] pr-[20px] py-[3px] rounded-[4px]"
                     onClick={() => {
-                        navigate("/Sign")
-                        localStorage.clear()
+                        id ? 
+                        navigate("/Profile") : navigate('Sign')
+                        // localStorage.clear()
                     }}
                     >
                         <img

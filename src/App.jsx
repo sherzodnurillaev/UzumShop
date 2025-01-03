@@ -9,6 +9,7 @@ const ProductPage = lazy(() => import('./Pages/Products'));
 const SignPage = lazy(() => import('./Pages/Sign'));
 const FavoritePage = lazy(() => import('./Pages/Favorite'));
 const BasketPage = lazy(() => import('./Pages/Basket'));
+const ProfilePage = lazy(() => import('./Pages/Profile'));
 
 import { createContext } from 'react';
 
@@ -31,6 +32,7 @@ function App() {
               <Route path='Favorite' element={<FavoritePage />} />
               <Route path='Basket' element={<BasketPage />} />
           </Route> 
+              <Route path='Profile' element={<ProfilePage />} />
         </Routes>
       </Suspense>
     </States.Provider>

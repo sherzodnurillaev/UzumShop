@@ -5,13 +5,14 @@ import { States } from "../App";
 
 const Sign = () => {
     const { state, setState } = useContext(States);
+    
     return (
         <>
          <center className="grid place-items-center h-screen">
 
             <div className="w-[300px] border-[2px] py-[20px] rounded-[12px]">
                 {
-                    state ? <SignUp /> : <Login />
+                    state ? <SignUp states={setState}/> : <Login states={setState}/>
                     // SignUp
                 }
                 <p className="text-[12px]">

@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import { States } from '../../App';
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -52,7 +53,7 @@ const Login = () => {
                 />
                 {errors.password && <p>{errors.password.message}</p>}
             </div>
-            <button type="submit">Login</button>
+            <button className='bg-[#3950e5] text-[#fff] rounded-[4px] px-[10px] my-[10px]' type="submit">Login</button>
 
         </form>
     );

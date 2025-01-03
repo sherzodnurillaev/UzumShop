@@ -3,11 +3,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { States } from '../../App';
 
-const SignUp = () => {
+const SignUp = ({states}) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [user, setUser] = useState(null)
-
-    const { state, setState } = useContext(States);
 
     const onSubmit = (data) => {
       // Логика для обработки данных регистрации
@@ -20,8 +18,6 @@ const SignUp = () => {
             
             axios.post("http://localhost:8081/Users", {...user, favorites: []})
             .then(res => console.log(res.data))
-
-            setState(true)
         }
 
     }, [user])
@@ -72,7 +68,7 @@ const SignUp = () => {
         />
         {errors.password && <p>{errors.password.message}</p>}
       </div>
-      <button type="submit">Register</button>
+      <button className='bg-[#3950e5] text-[#fff] rounded-[4px] px-[10px] my-[10px]' type="submit">Register</button>
     </form>
     </>
     )
